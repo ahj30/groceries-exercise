@@ -89,12 +89,11 @@ for d in departments:
 
 
 
-#######################################3
 
 
 
 
-#
+#Output should look like
 #--------------
 #THERE ARE 20 PRODUCTS:
 #--------------
