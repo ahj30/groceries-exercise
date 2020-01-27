@@ -65,7 +65,7 @@ for p in products:
         departments.append(p["department"])
 
 
-
+unique_departments = list(set(departments))
 
 
 
@@ -73,7 +73,9 @@ print("--------------")
 print(f"THERE ARE {len(departments)} DEPARTMENTS")
 print("--------------")
 
-for d in departments:
+unique_departments.sort()
+
+for d in unique_departments:
     matching_products = [p for p in products if p["department"] == d]
     matching_products_count = len(matching_products)
     if matching_products_count > 1:
