@@ -2,6 +2,8 @@
 
 #from pprint import pprint
 
+import operator
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -51,8 +53,9 @@ print("--------------")
     #print(" + " + p["name"] + " ($" + str(p["price"]) + ")")
 
 
+sorted_products = sorted(products, key=operator.itemgetter("name"))
 
-for p in products:
+for p in sorted_products:
     print(" + " + p["name"] + " (" + to_usd(p["price"]) + ")")
     #print(" + " + p["name"] + " ($" + str(p["price"]) + ")")
 
